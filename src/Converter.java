@@ -13,6 +13,7 @@ public class Converter {
                     
                     Enter choice:\s
                     """);
+            //The program continuously operates based on the user's choice until he/she decides to quit.
             int choice = input.nextInt();
             input.nextLine();
             if (choice == 1){
@@ -87,6 +88,9 @@ public class Converter {
         int length = text.length();
         String result = "";
 
+        //For each character, an ASCII number is obtained. This number is constantly being
+        //compared to the powers of 2 (starting from 128 going down) to see if it is higher or equal.
+        //If it is, a 1 is added to 'result'. If not, a 0 is added.
         for (int i = 0; i < length; i++){
             int num = 128;
             int asciiNum = text.charAt(i);
